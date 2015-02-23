@@ -34,7 +34,7 @@ if (isset($_REQUEST['category'])) {
 $search = new Search();
 
 // order by newest first
-$search->orderBy = "link_date DESC, link_id ASC";
+$search->orderBy = "link_votes DESC, link_date DESC, link_id ASC";
 
 // figure out what "page" of the results we're on
 $search->offset = (get_current_page()-1)*$page_size;
